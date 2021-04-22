@@ -1,5 +1,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
+
+
 /* Document
    ========================================================================== */
 
@@ -366,8 +368,7 @@ template {
     position: absolute;
     top: 0;
     right: 8px;
-    background-color: lightgreen;
-    color: green;
+
     display: inline-block;
     padding: 2px;
     border-radius: 50%;
@@ -388,6 +389,7 @@ template {
 
 .menu {
     flex: 1;
+    font-family: Roboto;
 }
 
 .menu > ul {
