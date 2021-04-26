@@ -2,7 +2,7 @@ import React from 'react';
 
 function Menu(props) {
     return (
-        <div className='menu'>
+        <div className="menu">
             <ul>
                 <li><a href="#/clothes">Одежда</a></li>
                 <li><a href="#/kids">Детям</a></li>

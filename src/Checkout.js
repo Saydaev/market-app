@@ -1,21 +1,21 @@
 import React from 'react';
-import checkout from './shopping-cart-solid.svg';
+import image from './shopping-cart-solid.svg';
 
-function Checkout(props) {
+function Checkout({database}) {
 
-    const zero = props.database.filter((item) => {
-        if (item.bought){
-            return item;
-        } else {
-            return '';
-        }
-    })
+        const zero = database.filter((item) => {
+            if (item.bought){
+                return item;
+            } else {
+                return '';
+            }
+        })
 
-    const newZero = zero.length;
+        const newZero = zero.length;
 
     return (
         <div className='checkout'>
-            <img src={checkout} alt='checkout' />
+            <img src={image} alt='card-image' />
             <span className='counter'>{newZero}</span>
         </div>
     );

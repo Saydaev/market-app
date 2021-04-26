@@ -8,7 +8,7 @@ function Header(props) {
         <div className='header'>
             <Logo />
             <Menu />
-            <Checkout database={props.database} setDataBase={props.database} />
+            <Checkout database={props.database} setDatabase={props.setDatabase} />
         </div>
     );
 }

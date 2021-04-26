@@ -1,14 +1,10 @@
 import React from 'react';
 
-function Button(props) {
-    console.log(props.database)
-
-
-
+function Button({setBought, index , bought}) {
     return (
-        <div className='card-button'>
-            <button disabled={false} className="btn" onClick={props.setBought}>Добавить в корзину</button>
-        </div>
+        <button className='btn' onClick={() => setBought(index)} disabled={bought}>
+            {bought ? 'Добавлено в корзину' : 'Добавить в корзину'}
+        </button>
     );
 }
 

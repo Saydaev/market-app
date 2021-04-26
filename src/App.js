@@ -2,7 +2,8 @@ import Header from "./Header";
 import Content from "./Content";
 import {useState} from "react";
 
-function App() {
+
+function App(props) {
 
     const [database, setDatabase] = useState([
         {
@@ -77,18 +78,22 @@ function App() {
             rating: "*****",
             image: "http://intocode.ru/d/react-project-1/images/9.jpg"
         }
-    ])
-    const setBought = (idObj) => {
-        setDatabase(...database, idObj.bought = true)
+    ]);
 
-    }
+     const setBought = (index) => {
+         setDatabase(
+             ...database,
+             [index].bought = true
+             )
+     }
 
-  return (
-    <div className="app">
-      <Header database={database} setDatabase={setDatabase} products={database} />
-      <Content database={database} setDatabase={setDatabase} setBought={setBought} />
-    </div>
-  );
+
+    return (
+        <div className='app'>
+            <Header database={database} setDatabase={setDatabase}  />
+            <Content database={database} setDatabase={setDatabase} setBought={setBought}  />
+        </div>
+    );
 }
 
 export default App;
