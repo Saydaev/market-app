@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from "./Card";
 
-function Content(props) {
+function Content({setBought, database, setDatabase}) {
     return (
         <div className='content'>
-            <Card database={props.database} setDatabase={props.setDatabase} setBought={props.setBought} />
+            <Card database={database} setDatabase={setDatabase} setBought={setBought} />
         </div>
     );
 }

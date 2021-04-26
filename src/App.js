@@ -82,8 +82,7 @@ function App(props) {
 
      const setBought = (index) => {
          setDatabase(
-             ...database,
-             [index].bought = true
+             [...database],database[index].bought = true
              )
      }
 

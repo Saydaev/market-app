@@ -3,12 +3,12 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import Checkout from "./Checkout";
 
-function Header(props) {
+function Header({database, setDatabase}) {
     return (
         <div className='header'>
             <Logo />
             <Menu />
-            <Checkout database={props.database} setDatabase={props.setDatabase} />
+            <Checkout database={database} setDatabase={setDatabase} />
         </div>
     );
 }
